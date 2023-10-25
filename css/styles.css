@@ -1,0 +1,1791 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    background-color: #b6b6b6;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+html body::-webkit-scrollbar {
+    width: 7px;
+}
+
+html body::-webkit-scrollbar-track {
+    background-color: #b6b6b6;
+}
+
+html body::-webkit-scrollbar-thumb {
+    background-color: tomato;
+}
+
+/*Xu ly header*/
+.header_top {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    height: 44px;
+    width: 100%;
+    padding: 10px;
+}
+
+.header .header_contact {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header .header_contact i {
+    margin-left: 15px;
+}
+
+.header_contact a i {
+    text-decoration: none;
+    color: white;
+}
+
+.header_bot {
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.header_bot .header_icon a img,
+.header_bot .header_menu ul li a,
+.header_bot .deals button a {
+    text-decoration: none;
+}
+
+
+.header_menu ul li {
+    display: inline;
+    float: left;
+    margin-right: 50px;
+    padding: 17px;
+    font-size: 17px;
+}
+
+.header_menu ul li a {
+    color: black;
+}
+
+.deals button {
+    cursor: pointer;
+    height: 40px;
+    width: 90px;
+    border-radius: 20px;
+    border: 3px solid blue;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+    color: blue;
+    margin-top: 7px;
+}
+
+.deals button:hover {
+    font-size: 16px;
+    height: 42px;
+    width: 92px;
+    transition: all 0.7s;
+}
+
+.header_menu ul li a:hover {
+    transition: all 0.7s;
+    color: tomato;
+}
+
+.header_accout ul li {
+    display: inline;
+    float: left;
+    margin-top: 10px;
+}
+
+.header_accout ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.header_accout ul li {
+    margin: 10px;
+    padding: 10px;
+}
+
+.header_accout .dropdown {
+    position: relative;
+}
+
+.fa-search,
+.fa-shopping-cart {
+    font-size: 20px;
+}
+
+.number_cart {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 600;
+    height: 15px;
+    width: 16px;
+    line-height: 13px;
+    border-radius: 50%;
+    background-color: yellow;
+    text-align: center;
+    top: 10.5%;
+    right: 5%;
+    z-index: 10;
+}
+
+.header_accout ul .cart {
+    position: relative;
+}
+
+.header_accout li a i:hover {
+    color: tomato;
+    transition: 0.7s;
+}
+
+.header_accout .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: auto;
+    border: 1px solid black;
+    background-color: white;
+    width: 120px;
+    z-index: 100;
+}
+
+.header_accout .login-menu {
+    width: 120px;
+}
+
+.dropdown ul li {
+    list-style: none;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+}
+
+/*.dropdown:hover .dropdown-menu {
+    display: block;
+    z-index: 10;
+}*/
+
+.dropdown-menu li a:hover {
+    text-decoration: underline;
+    color: tomato;
+}
+
+.header_accout ul .dropdown p,
+.dropdown .img_user {
+    cursor: pointer;
+}
+
+.dropdown p {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.header_accout .dropdown .img_user {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+
+.header_accout .dropdown .img_user,
+.header_accout .dropdown p {
+    display: inline;
+    float: left;
+}
+
+/*Ket thuc header*/
+
+/*Xu ly search*/
+#search_box {
+    background: white;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.search_frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search_text {
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 500px;
+    font-size: 15px;
+}
+
+#search_submit {
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    background: white;
+}
+
+/*Ker thuc search*/
+
+/*Xu ly category*/
+.category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    margin-top: 50px;
+}
+
+.category .category_frame {
+    background-color: white;
+    padding: 10px;
+}
+
+.category .category_frame .title_category {
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.category .category_frame .content_category ul {
+    display: flex;
+}
+
+.category .category_frame .content_category ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+.category .category_frame .content_category ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+.category .category_frame .content_category ul li a:hover {
+    color: tomato;
+}
+
+/*Ket thuc category*/
+
+/*Xu ly content*/
+.content_type,
+.content_laptop,
+.page_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_frame {
+    margin-top: 20px;
+    height: auto;
+    /*1000*/
+    background-color: white;
+    width: 80%;
+}
+
+.content_item {
+    border: 1px solid #e1e1e1;
+    padding: 20px 0;
+    position: relative;
+}
+
+.content_item .img_laptop img {
+    position: relative;
+    width: 227px;
+    height: 227px;
+}
+
+.content_item .in_stock {
+    display: flex;
+    color: green;
+    margin-left: 10px;
+}
+
+.content_card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 5px 5px;
+}
+
+.describe_laptop,
+.cost_laptop {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.cost_laptop p {
+    text-decoration-line: line-through;
+    color: gray;
+    font-size: 17px
+}
+
+.click_order {
+    display: flex;
+    padding: 10px 5px;
+    background-color: rgb(123 95 95 / 80%);
+    position: absolute;
+    top: 65%;
+    opacity: 0;
+}
+
+.click_order p a {
+    color: white;
+    text-decoration: none;
+}
+
+.click_order button {
+    margin-left: 15px;
+    background-color: rgb(6 85 166);
+    padding: 0px 9.5px;
+    border: none;
+    cursor: pointer;
+}
+
+.click_order button:hover {
+    background-color: rgb(6 85 166);
+}
+
+.content_item:hover .click_order {
+    opacity: 1;
+    transition: all 0.5s;
+    transform: translateY(-50%);
+}
+
+.content_item:hover {
+    border: 1px solid yellow;
+}
+
+.page_number {
+    margin-top: 25px;
+}
+
+.page_number .number ul {
+    display: flex;
+}
+
+.page_number .number ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.page_number .number ul li {
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 30px;
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.page_number .number li:hover {
+    background-color: yellow;
+    transition: all 0.7s;
+}
+
+/*Ket thuc content*/
+
+/*Xu ly contact*/
+.contact {
+    background: #F5F7FF;
+    width: 100%;
+    height: 250px;
+    margin-top: 50px;
+}
+
+.contact_frame {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact_card {
+    text-align: center;
+    padding: 60px 10px;
+}
+
+.contact_card i {
+    font-size: 25px;
+    padding: 15px 15px;
+    border-radius: 30px;
+    background-color: blue;
+    color: white;
+}
+
+.contact_card i,
+.contact_card h3,
+.contact_card p {
+    margin: 10px;
+}
+
+.page_number .active {
+    background-color: tomato;
+}
+
+/*Ket thuc contact*/
+
+/*Xu ly helps*/
+.helps {
+    height: auto;
+    width: 100%;
+    background-color: black;
+    margin-top: 100px;
+}
+
+/*.helps_top {
+    display: flex;
+    justify-content: space-around;
+}*/
+/*.newsletter,
+.email {
+    width: 50%;
+}
+.newsletter {
+    padding: 30px 30px;
+    color: white;
+}
+.newsletter p {
+    font-size: 17px;
+    margin-top: 10px;
+}
+.email {
+    padding: 50px 80px;
+}
+.email button {
+    color: white;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: blue;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    margin-left: 10px;
+}*/
+.helps_mid {
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+
+.helps_mid h3 {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.helps_mid ul li {
+    list-style: none;
+    color: white;
+    margin: 5px;
+}
+
+.information,
+.laptops,
+.pc_parts {
+    float:left;
+    width: 20%;
+    padding: 10px 30px;
+}
+
+/*padding: top/right/bottom/left*/
+.address {
+    width: 40%;
+    padding: 10px 30px; 
+}
+
+.helps_bot {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social_website,
+.credit,
+.copyright {
+    padding: 10.8px 30px;
+    width: 33%;
+}
+
+.social_website a i {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.social_website i {
+    padding: 5px 5px;
+}
+
+.credit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit i {
+    font-size: 30px;
+    padding: 5px 5px;
+}
+
+.copyright p {
+    padding: 10px 10px;
+    margin-left: 100px;
+    font-size: 16px;
+    color: gray;
+}
+
+/*Ket thuc helps*/
+
+/*Xu ly login*/
+.login_admin_page {
+    background-image: url(../img/background_login1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 753.9px;
+}
+
+.login_admin_page form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.login_admin_page form input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login_admin_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_admin_header form {
+    border: 2px solid b;
+    padding: 90px;
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.604);
+    border-radius: 20px;
+}
+
+.login_admin_page form input {
+    width: 300px;
+    height: 40px;
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.login_admin_page form input,
+.login_admin_page form label {
+    margin-left: 35px;
+}
+
+.login_admin_page button {
+    padding: 15px;
+    margin-left: 125px;
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.login_admin_page button:hover {
+    background-color: tomato;
+}
+
+.login_admin_page .list_login ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.login_admin_page .list_login ul li {
+    list-style: none;
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+
+.login_admin_page .list_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.login_admin_page .list_login ul li a:hover {
+    color: tomato;
+}
+
+.forgot-password-form {
+    display: none;
+}
+
+/*Ket thuc login*/
+
+/*Xu ly dang ky*/
+.dangky_admin_page {
+    background-image: url(../img/background_login1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 753.9px;
+}
+
+.dangky_admin_page form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.dangky_admin_page form input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.dangky_admin_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dangky_admin_header form {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.604);
+    border-radius: 20px;
+}
+
+.dangky_admin_page form input {
+    width: 500px;
+    height: 40px;
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.dangky_admin_page form input,
+.dangky_admin_page form label {
+    margin-left: 35px;
+}
+
+.dangky_admin_page button {
+    padding: 15px;
+    margin-left: 230px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.dangky_admin_page button:hover {
+    background-color: tomato;
+}
+
+.dangky_admin_page .list_dangky ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.dangky_admin_page .list_dangky ul li {
+    list-style: none;
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+
+.dangky_admin_page .list_dangky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dangky_admin_page .list_dangky ul li a:hover {
+    color: tomato;
+}
+
+/*Ket thuc dang ky*/
+
+/*Xu li forgot_password*/
+.background_forgot_password {
+    background-image: url(../img/background_login1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 753.9px;
+}
+
+.forgot_password_frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_forgot_password {
+    margin-top: 100px;
+    padding: 85px;
+    background-color: rgba(255, 255, 255, 0.604);
+    border-radius: 30px;
+}
+
+.form_forgot_password label,
+.form_forgot_password input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form_forgot_password input {
+    padding: 15px;
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.form_forgot_password button {
+    padding: 12px;
+    margin-left: 100px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.form_forgot_password button:hover {
+    background-color: tomato;
+}
+
+.form_forgot_password .list_forgot_password ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.form_forgot_password .list_forgot_password ul li {
+    list-style: none;
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+
+.form_forgot_password .list_forgot_password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/*Ket thuc forgot_password*/
+
+/*Xu li admin*/
+.background-admin {
+    background-image: url(../img/background_admin1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 753.9px;
+    width: 100%;
+}
+
+/*Ket thuc admin*/
+
+/*Xu li product_tails*/
+.product_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_details_frame {
+    padding: 0;
+    background-color: white;
+    width: 85%;
+    border-radius: 20px;
+}
+
+.product_details_left img {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    margin-left: 25px;
+}
+
+.chia_doi_content {
+    display: flex;
+}
+
+.product_details_left {
+    width: 30%;
+}
+
+.product_details_right {
+    width: 70%;
+    border-left: 1px solid #ececec;
+}
+
+.product_details_name {
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.product_details_content h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.product_details_content table tr td {
+    border: 2px solid #eeeeee;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    padding: 8px;
+}
+
+.product_details_content table {
+    box-sizing: border-box;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+.product_details_left .cost_laptop {
+    display: flex;
+}
+
+.product_details_orders {
+    padding: 30px;
+    border-top: 1px solid #ececec;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_details_info_1 {
+    background-color: #f7f7f7;
+    font-weight: 600;
+    width: 108.5px;
+}
+
+.product_details_info_2 {
+    width: 675px;
+}
+
+.product_details_orders button {
+    margin: 10px;
+    padding: 10px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.product_details_orders button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/*Ket thuc product_tails*/
+
+/*Xu li view-cart*/
+
+/*Ket thuc view-cart*/
+.header_view_cart {
+    width: 100%;
+    margin-top: 50px;
+
+}
+
+.frame_view_cart {
+    background-color: white;
+    padding: 15px;
+    width: 550px;
+    height: auto;
+}
+
+.center_view_cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduce_view_cart {
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.frame_view_cart .hollow_cart {
+    text-align: center;
+    padding: 150px 0;
+}
+
+.frame_view_cart table thead tr th {
+    padding: 5px;
+    text-align: center;
+}
+
+.frame_view_cart table tbody tr td {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.frame_view_cart table tbody tr td img {
+    width: 150px;
+    height: 150px;
+}
+
+.frame_view_cart table tbody tr .name_product {
+    padding: 20px;
+    width: 70%;
+}
+
+.frame_view_cart .product_quantity {
+    width: 60px;
+    text-align: center;
+    /*border-radius: 20px;*/
+    padding: 5px;
+}
+
+.frame_view_cart .form_quantity {
+    width: 20%;
+}
+
+.frame_view_cart .update_quantity {
+    padding: 0px 16px;
+    /*border-radius: 20px;*/
+}
+
+.frame_view_cart .delete_product {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: yellow;
+}
+
+.frame_view_cart .delete_product a {
+    text-decoration: none;
+    color: black;
+}
+
+.frame_view_cart table {
+    border-bottom: 1px solid black;
+}
+
+.frame_view_cart .total_product {
+    font-size: 20px;
+    width: 50%;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.frame_view_cart .checkout a {
+    text-decoration: none;
+    padding: 5px;
+    background-color: tomato;
+    color: white;
+}
+
+.frame_view_cart .checkout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/*Xu li checkout*/
+.header_checkout {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info_user {
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    height: 540px;
+}
+
+.header_checkout .form-group label {
+    display: block;
+    font-weight: bold;
+    margin: 2px;
+}
+
+.header_checkout .form-group input,
+.header_checkout .form-group textarea {
+    display: block;
+}
+
+.header_checkout .form-group input {
+    width: 350px;
+    padding: 10px;
+}
+
+.header_checkout .form-group textarea {
+    width: 350px;
+    padding: 10px;
+    height: 200px;
+}
+
+.header_checkout .introduce_order,
+.header_checkout .introduce_info {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.header_checkout .info_order {
+    background-color: white;
+    margin-top: 20px;
+    padding: 10px;
+    height: auto;
+}
+
+.header_checkout .info_order table thead tr th {
+    padding: 5px;
+    text-align: center;
+}
+
+.header_checkout .info_order table tbody tr td {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.header_checkout .name_product {
+    width: 50%;
+}
+
+.header_checkout table {
+    border-bottom: 1px solid black;
+}
+
+.header_checkout .total_product {
+    font-size: 20px;
+    width: 50%;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.header_checkout .submit_checkout {
+    padding: 10px;
+    background-color: tomato;
+    border: none;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header_checkout button {
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.require_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.require_login .frame_require_login {
+    margin-top: 20px;
+    padding: 130px 20px 20px 20px;
+    background-color: white;
+    height: 300px;
+}
+
+/*Ket thuc checkout*/
+
+/*Xu li admin*/
+.header_admin .frame_header_admin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_admin {
+    background-color: white;
+    height: 65px;
+    z-index: 10;
+    border-bottom: 2px solid black;
+}
+
+.header_admin .frame_header_admin .logo_admin .frame_logo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header_admin .frame_header_admin .logo_admin .img_logo a img {
+    width: 55px;
+    height: 60px;
+    padding-top: 5px;
+}
+
+.header_admin .frame_header_admin .frame_logo h2 {
+    padding: 22px 0px 0 0;
+    color: white;
+}
+
+.header_admin .frame_header_admin .logo_admin {
+    background-color: #263544;
+    width: 20%;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    position: fixed;
+}
+
+.header_admin .frame_header_admin .account_admin {
+    width: 20%;
+    margin-left: 1300px;
+}
+
+.header_admin .frame_header_admin .account_admin li {
+    list-style: none;
+}
+
+.header_admin .frame_header_admin .account_admin .dropdown-menu {
+    display: none;
+    position: absolute;
+    padding: auto;
+    background-color: white;
+    padding: 10px;
+    top: 7.5%;
+    border: 1px solid black;
+    right: 8%;
+}
+
+
+.header_admin .dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.header_admin .dropdown-menu li a:hover {
+    color: tomato;
+}
+
+.header_admin .dropdown-menu li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.header_admin .frame_header_admin .account_admin li p {
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: auto;
+    padding-left: 10px;
+    padding-right: auto;
+    cursor: pointer;
+}
+
+.header_admin .frame_header_admin .account_admin li img {
+    padding: 1px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.account_admin .login_menu {
+    width: 100px;
+    padding: 10px;
+}
+
+.header_admin .frame_header_admin .account_admin li img,
+.header_admin .frame_header_admin .account_admin li p {
+    display: inline;
+    float: left;
+}
+
+.header_admin .frame_header_admin .account_admin .dropdown {
+    padding-top: 7px;
+    /*position: relative;*/
+}
+
+.content_admin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_admin .left_content {
+    background-color: #263544;
+    width: 20%;
+    height: 688.3px;
+    overflow-y: scroll;
+    /*scroll*/
+    flex-grow: 1;
+    position: fixed;
+}
+
+.content_admin .left_content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.content_admin .left_content::-webkit-scrollbar-track {
+    background-color: #263544;
+}
+
+.content_admin .left_content::-webkit-scrollbar-thumb {
+    background-color: rgb(23 32 41);
+}
+
+.content_admin .left_content .list_category ul li {
+    list-style: none;
+    padding-top: 30px;
+}
+
+.content_admin .left_content .list_category ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #b7c0cd;
+    padding-left: 30px;
+    display: block;
+}
+
+.content_admin .left_content .list_category ul li a:hover {
+    color: white;
+}
+
+.content_admin .right_content {
+    width: 80%;
+    margin-left: 306px;
+}
+
+.content_admin .right_content .statistic {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content_admin .right_content .frame_statistic .statistic {
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.content_admin .right_content .statistic .title_total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_admin .right_content .statistic .frame_total {
+    padding: 15px;
+    width: 20%;
+}
+
+.content_admin .right_content .title_total h3 {
+    padding-left: 5px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.content_admin .right_content .title_total i {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.content_admin .right_content .frame_total span h3 {
+    padding: 0px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*Ket thuc admin*/
+
+/*Xu li manager_product*/
+.manager_product_frame .manager_product table {
+    box-sizing: border-box;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 10px;
+    margin-left: 0px;
+}
+
+.manager_product_frame .manager_product table tr th {
+    border: 2px solid #eeeeee;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    padding: 8px;
+}
+
+.manager_product_frame .manager_product table tr td {
+    border: 2px solid #eeeeee;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    padding: 8px;
+}
+
+.manager_product_frame .manager_product button {
+    padding: 10px;
+    background-color: tomato;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.manager_product_frame .manager_product button a {
+    color: white;
+    text-decoration: none;
+}
+
+.manager_product_frame .manager_product .button_fdd {
+    display: flex;
+}
+
+.manager_product_frame .manager_product .button_fixed,
+.manager_product_frame .manager_product .button_delete {
+    margin-right: 10px;
+}
+
+.manager_product_frame {
+    background-color: white;
+    padding: 10px;
+    height: 100%;
+}
+
+.manager_product_frame .title_manager_product h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.manager_product_frame .button_add_product button {
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: greenyellow;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.manager_product_frame .button_add_product button a {
+    text-decoration: none;
+    color: white;
+}
+
+.manager_product_frame .operation_product .frame_search_product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manager_product_frame .operation_product {
+    padding-bottom: 30px;
+}
+
+.manager_product_frame .operation_product #search_box {
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.manager_product_frame .search_product #search_text {
+    padding: 10px 10px;
+    outline: none;
+    width: 300px;
+    font-size: 15px;
+    border: none;
+    border-radius: 50%;
+}
+
+.manager_product_frame .search_product #search_submit {
+    border: none;
+    padding: 10px 10px;
+    background: white;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+/*Ket thuc manager_product*/
+
+/*Xu li add_product*/
+.header_add_product {
+    background-color: white;
+    padding: 10px;
+}
+
+.header_add_product .title_add_product {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.header_add_product .operation_add_product button a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    padding: 10px;
+}
+
+.header_add_product .operation_add_product button {
+    background-color: greenyellow;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+}
+
+.header_add_product .frame_form_add_product form .title_info {
+    display: block;
+    padding: 5px;
+    font-size: 17px;
+}
+
+.header_add_product .frame_form_add_product form input {
+    display: block;
+    padding: 10px;
+    width: 350px;
+}
+
+.header_add_product .frame_form_add_product .form_add_product {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header_add_product .frame_form_add_product .form_add_product .img_product input {
+    width: 350px;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.header_add_product .frame_form_add_product form button {
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 550px;
+    margin-bottom: 50px;
+}
+
+.header_add_product .frame_form_add_product form .content_product {
+    width: 350px;
+    height: 100px;
+    padding: 10px;
+}
+
+.header_add_product form .checkboxx {
+    display: flex;
+}
+
+.header_add_product form .checkboxx .checkbox-container {
+    display: flex;
+}
+
+.header_add_product form .checkboxx .checkbox-container input {
+    width: auto;
+    padding: 10px;
+}
+
+.header_add_product form .checkboxx .checkbox-container label {
+    width: auto;
+    padding: 10px;
+}
+
+.header_add_product form .checkboxx .checkbox-sold-out {
+    margin-left: 20px;
+}
+
+/*Ket thuc add_product*/
+
+/*Xu li manager_orders*/
+.manager_orders_frame .manager_orders table {
+    box-sizing: border-box;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 10px;
+    margin-left: 0px;
+}
+
+.manager_orders_frame .manager_orders table tr th {
+    border: 2px solid #eeeeee;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    padding: 8px;
+}
+
+.manager_orders_frame .manager_orders table tr td {
+    border: 2px solid #eeeeee;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    padding: 8px;
+}
+
+.manager_orders_frame .manager_orders table tr .content_product {
+    width: 35%;
+    text-align: left;
+}
+
+.manager_orders_frame .manager_orders table tr .id_order {
+    width: 2%;
+}
+
+.manager_orders_frame .manager_orders button {
+    padding: 10px;
+    background-color: tomato;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.manager_orders_frame .manager_orders button a {
+    color: white;
+    text-decoration: none;
+}
+
+.manager_orders_frame .manager_orders .order_browsing {
+    margin-right: 10px;
+}
+
+.manager_orders_frame {
+    background-color: white;
+    padding: 10px;
+    height: 100%;
+}
+
+.manager_orders_frame .title_manager_orders h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.manager_orders_frame .operation_orders .frame_search_orders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manager_orders_frame .operation_orders {
+    padding-bottom: 30px;
+}
+
+.manager_orders_frame .operation_orders #search_box {
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.manager_orders_frame .search_orders #search_text {
+    padding: 10px 10px;
+    outline: none;
+    width: 300px;
+    font-size: 15px;
+    border: none;
+    border-radius: 50%;
+}
+
+.manager_orders_frame .search_orders #search_submit {
+    border: none;
+    padding: 10px 10px;
+    background: white;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+/*Ket thuc manager_orders*/
+
+/*Xu li profile_users*/
+.frame_profile_users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.frame_profile_users .profile_users {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.frame_profile_users .profile_users .account_name {
+    display: flex;
+}
+
+.frame_profile_users .profile_users .account_name {
+    border-bottom: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.frame_profile_users .profile_users .profile_users_left .title_account {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.frame_profile_users .profile_users .profile_users_left .account_name img {
+    width: 55px;
+    height: 55px;
+    border-radius: 30px;
+}
+
+.frame_profile_users .profile_users .account_name p {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.frame_profile_users .profile_users_left {
+    background-color: white;
+}
+
+.frame_profile_users .profile_users .profile_users_left .title_account ul li {
+    list-style: none;
+}
+
+.frame_profile_users .profile_users .profile_users_left .title_account ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.frame_profile_users .profile_users .profile_users_left .title_account ul li i {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.frame_profile_users .profile_users .profile_users_right {
+    background-color: white;
+    width: 65%;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r {
+    padding: 10px;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form label,
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form input {
+    margin: 5px;
+    font-size: 17px;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form .frame_form {
+    display: flex;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form .frame_form .title_form {
+    width: 76%;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form .frame_form p {
+    padding: 11px;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form .frame_form .info_form input {
+    padding: 7px;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form .frame_form .info_form {
+    margin-left: 10px;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form .frame_form .info_form input {
+    width: 550px;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form .button_profile button {
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    background-color: tomato;
+    color: white;
+    font-weight: 600;
+}
+
+.frame_profile_users .profile_users .profile_users_right .frame_p_u_r form .button_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_profile_u {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Ket thuc profile_users*/
+
+/*Xu li changer_password*/
+.frame_profile_users .profile_users_right .notification_changer_password {
+    margin-top: 20px;
+}
+
+/*Ket thuc changer_password*/
+
+/*Xu li orders_users*/
+.profile_users_right .frame_p_u_r .content_orders table {
+    box-sizing: border-box;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 10px;
+    margin-left: 0px;
+}
+
+.profile_users_right .frame_p_u_r .content_orders table tr th {
+    border: 2px solid #eeeeee;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    padding: 8px;
+    text-align: center;
+}
+
+.profile_users_right .frame_p_u_r .content_orders table tr td {
+    border: 2px solid #eeeeee;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    padding: 8px;
+    text-align: center;
+}
+
+.profile_users_right .frame_p_u_r .content_orders table .content_ord_u {
+    width: 45%;
+}
+
+.profile_users_right .frame_p_u_r .content_orders table .id_ord_u {
+    width: 5%;
+}
+
+.profile_users_right .frame_p_u_r .content_orders table .address_ord_u {
+    width: 25%;
+}
+
+/*Ket thuc orders_users*/
